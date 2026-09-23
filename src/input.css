@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+    --font-roboto: "Roboto", sans-serif;
+}
+
+body {
+    @apply min-h-screen
+    font-roboto
+    bg-[url('../assets/images/SkySightBGMobile.png')]
+    lg:bg-[url('../assets/images/SkySightBGdesktop.png')]
+    bg-cover
+    bg-center
+    bg-no-repeat
+    text-white;
+}
+
+header {
+    @apply p-2
+    bg-linear-to-br
+    from-white/20
+    via-white/10
+    to-white/5
+    backdrop-blur-xs
+    shadow-2xl
+    sticky
+    top-0
+    z-50
+}
+
+h1 {
+    @apply text-white
+    font-bold
+    text-2xl;
+}
+
+
+
+/* search section */
+.search-section {
+    @apply w-[90%]
+    max-w-4xl
+    mx-auto
+    my-10
+    flex
+    justify-between
+    items-center
+}
+
+#cityInput {
+    @apply w-[90%]
+    focus:outline-none
+    px-5 
+    py-2
+    font-semibold;
+}
+
+#searchBtn {
+    @apply px-2
+    py-2
+    cursor-pointer
+    text-xl
+}
+
+
+
+/* glass effect */
+.glass {
+    @apply bg-linear-to-br
+    from-white/10
+    via-white/5
+    to-white/0
+    backdrop-blur-xs
+    border
+    border-white/20
+    rounded-xl
+    shadow-2xl;
+}
+
+
+
+/* weather section */
+.weather-section {
+    @apply w-[90%]
+    max-w-4xl
+    mx-auto
+    my-10
+    text-white
+    font-bold
+}
+
+.location-current-weather {
+    @apply
+    flex
+    justify-between
+    items-center
+    px-5
+    py-3
+    mx-auto;
+}
+
+#cityName {
+    @apply text-2xl;
+}
+
+#countryName {
+    @apply text-lg;
+}
+
+.current-weather {
+    @apply text-right;
+}
+
+.icon-temperature {
+    @apply flex
+    items-center
+    gap-2;
+}
+
+#temperature {
+    @apply text-2xl;
+}
+
+#condition {
+    @apply text-lg;
+}
+
+
+
+/* weather details */
+.weather-details {
+    @apply w-[90%]
+    max-w-4xl
+    mx-auto
+    my-16
+    grid
+    grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-4
+    gap-5;
+}
+
+.card {
+    @apply text-center
+    py-2;
+}
+
+.card i {
+    @apply text-xl;
+}
