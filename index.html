@@ -26,6 +26,7 @@
     </header>
 
     <main>
+        <!-- search section -->
         <section class="search-section glass">
             <!-- search section -->
             <input type="text" placeholder="Search city" id="cityInput">
@@ -40,22 +41,22 @@
             <div class="location-current-weather glass">
                 <!-- location -->
                 <div class="location">
-                    <h2 id="cityName">Raichur</h2>
-                    <p id="countryName">India</p>
+                    <h2 id="cityName"></h2>
+                    <p id="countryName"></p>
                 </div>
 
                 <!-- current weather -->
                 <div class="current-weather">
                     <div class="icon-temperature">
                         <!-- icon -->
-                        <i id="weatherIcon" class="fa-solid fa-sun"></i>
+                        <img id="weatherIcon" src="" alt="Weather icon">
 
                         <!-- temperature -->
-                        <p id="temperature">28°C</p>
+                        <p id="temperature"></p>
                     </div>
                     
                     <!-- condition -->
-                    <p id="condition">Clear sky</p>
+                    <p id="condition"></p>
                 </div>
             </div>
         </section>
@@ -66,21 +67,21 @@
             <div class="card glass">
                 <i class="fa-solid fa-temperature-half text-orange-500"></i>
                 <p>Feels Like</p>
-                <p id="feelsLike">30°C</p>
+                <p id="feelsLike"></p>
             </div>
 
             <!-- humidity -->
             <div class="card glass">
                 <i class="fa-solid fa-droplet text-blue-500"></i>
                 <p>Humidity</p>
-                <p id="humidity">65%</p>
+                <p id="humidity"></p>
             </div>
 
             <!-- wind speed -->
             <div class="card glass">
                 <i class="fa-solid fa-wind text-cyan-400"></i>
                 <p>Wind Speed</p>
-                <p id="windSpeed">12 km/h</p>
+                <p id="windSpeed"></p>
             </div>
 
             <!-- pressure -->
@@ -94,21 +95,7 @@
             <div class="card glass">
                 <i class="fa-solid fa-eye text-slate-300"></i>
                 <p>Visibility</p>
-                <p id="visibility">10 km</p>
-            </div>
-
-            <!-- uv index -->
-            <div class="card glass">
-                <i class="fa-solid fa-sun text-yellow-400"></i>
-                <p>UV Index</p>
-                <p id="uvIndex">5</p>
-            </div>
-
-            <!-- dew point -->
-            <div class="card glass">
-                <i class="fa-solid fa-water text-cyan-300"></i>
-                <p>Dew Point</p>
-                <p id="dewPoint">22°C</p>
+                <p id="visibility"></p>
             </div>
 
             <!-- cloudiness -->
@@ -117,9 +104,24 @@
                 <p>Cloudiness</p>
                 <p id="cloudiness">40%</p>
             </div>
+
+            <!-- sunrise -->
+            <div class="card glass">
+                <i class="fa-solid fa-sun text-yellow-400"></i>
+                <p>Sunrise</p>
+                <p id="sunrise">--:--</p>
+            </div>
+
+            <!-- sunset -->
+            <div class="card glass">
+                <i class="fa-solid fa-cloud-sun text-yellow-400"></i>
+                <p>Sunset</p>
+                <p id="sunset">--:--</p>
+            </div>
         </section>
     </main>
 
+    <script src="./config.js" defer></script>
     <script src="./src/script.js" defer></script>
 </body>
 </html>

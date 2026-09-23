@@ -12,6 +12,7 @@ body {
     bg-cover
     bg-center
     bg-no-repeat
+    bg-fixed
     text-white;
 }
 
@@ -115,6 +116,11 @@ h1 {
     @apply flex
     items-center
     gap-2;
+}
+
+#weatherIcon {
+    @apply w-16
+    h-16
 }
 
 #temperature {

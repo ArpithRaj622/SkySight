@@ -10,7 +10,6 @@
       "Courier New", monospace;
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
-    --color-cyan-300: oklch(86.5% 0.127 207.078);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-purple-400: oklch(71.4% 0.203 305.504);
@@ -190,9 +189,6 @@
   .text-blue-500 {
     color: var(--color-blue-500);
   }
-  .text-cyan-300 {
-    color: var(--color-cyan-300);
-  }
   .text-cyan-400 {
     color: var(--color-cyan-400);
   }
@@ -216,6 +212,7 @@ body {
   min-height: 100vh;
   background-image: url('../assets/images/SkySightBGMobile.png');
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   font-family: var(--font-roboto);
@@ -355,6 +352,10 @@ h1 {
   display: flex;
   align-items: center;
   gap: calc(var(--spacing) * 2);
+}
+#weatherIcon {
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 16);
 }
 #temperature {
   font-size: var(--text-2xl);
