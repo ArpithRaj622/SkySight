@@ -143,7 +143,8 @@ h1 {
     grid-cols-2
     md:grid-cols-3
     lg:grid-cols-4
-    gap-5;
+    gap-6
+    lg:gap-12;
 }
 
 .card {
@@ -153,4 +154,37 @@ h1 {
 
 .card i {
     @apply text-xl;
+}
+
+
+
+/* 3 hour forecast */
+.forecast-3hour {
+    @apply w-[90%]
+    max-w-4xl
+    mx-auto
+    my-10
+    flex
+    justify-between
+    text-xs
+    md:text-base
+}
+
+.forecast-3hour-container {
+    @apply flex
+    justify-around
+    p-4
+    w-[76%]
+    lg:w-[80%]
+}
+
+.forecast-card {
+    @apply text-center;
+}
+
+.day-avg-card {
+    @apply text-center
+    p-4
+    w-[20%]
+    lg:w-[16%];
 }

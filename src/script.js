@@ -55,6 +55,7 @@ async function getWeather() {
             throw new Error("Failed to fetch weather data");
         }
         const data = await response.json();
+        localStorage.setItem("city", city);
         console.log(data);
         console.log(data.weather[0].icon);
 
@@ -67,7 +68,6 @@ async function getWeather() {
         temperature.textContent = `${data.main.temp}°C`;
 
         // display weather icon
-        // weather icon
         const weatherIcon = document.querySelector("#weatherIcon");
         weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
@@ -115,12 +115,16 @@ searchBtn.addEventListener("click", () => {
     city = city.charAt(0).toUpperCase() + city.slice(1);
     if (city === "") {
         return;
-    } else {
-        localStorage.setItem("city", city);
     }
     getWeather();
     cityInput.value = "";
 });
 
-console.log(city);
+// event listener - press enter after input
+cityInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        searchBtn.click();
+    }
+});
+
 getWeather();
