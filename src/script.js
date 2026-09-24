@@ -44,8 +44,14 @@ const sunrise = document.querySelector("#sunrise");
 // sunset
 const sunset = document.querySelector("#sunset");
 
+// 3 hour forecast cards
+const forecast3HourCards = document.querySelectorAll(".forecast-3hour-card");
 
-// function
+// average temperature
+const avgTemp = document.querySelector("#avgTemp");
+
+
+// function - get current weather
 async function getWeather() {
     // url
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -56,8 +62,8 @@ async function getWeather() {
         }
         const data = await response.json();
         localStorage.setItem("city", city);
-        console.log(data);
-        console.log(data.weather[0].icon);
+        // console.log(data);
+        // console.log(data.weather[0].icon);
 
         // display city
         cityName.textContent = city;
@@ -108,6 +114,45 @@ async function getWeather() {
     }
 }
 
+// function - get weather forecast
+async function getForecast() {
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+    try {
+        const response = await fetch(forecastUrl);
+        if (response.ok === false) {
+            throw new Error("Failed to fetch forecast data");
+        }
+        const data = await response.json();
+        console.log(data);
+        console.log(data.list);
+
+        const forecast = data.list.slice(0,5);
+        console.log(forecast);
+
+        let totalTemperature = 0;
+
+        forecast.forEach((item, index) => {
+            const card = forecast3HourCards[index];
+            const time = new Date(item.dt * 1000).toLocaleTimeString([], {
+                hour: "numeric"
+            });
+            const temperature = Math.round(item.main.temp);
+            card.querySelector(".time").textContent = time;
+            card.querySelector(".temp").textContent = `${temperature}°C`;
+
+            totalTemperature += temperature;
+
+            avgTemp.textContent = `${totalTemperature / forecast.length}°C`;
+        });
+
+        
+
+    } catch(error) {
+        console.error(error);
+    }
+}
+getForecast();
 
 // event listener - search button click
 searchBtn.addEventListener("click", () => {

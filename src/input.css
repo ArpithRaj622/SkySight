@@ -167,7 +167,7 @@ h1 {
     flex
     justify-between
     text-xs
-    md:text-base
+    md:text-base;
 }
 
 .forecast-3hour-container {
@@ -178,8 +178,12 @@ h1 {
     lg:w-[80%]
 }
 
-.forecast-card {
+.forecast-3hour-card {
     @apply text-center;
+}
+
+.forecast-3hour-card .time {
+    @apply text-sm
 }
 
 .day-avg-card {
