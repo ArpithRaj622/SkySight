@@ -294,9 +294,9 @@ h1 {
   border-radius: var(--radius-xl);
   border-style: var(--tw-border-style);
   border-width: 1px;
-  border-color: color-mix(in srgb, #fff 20%, transparent);
+  border-color: color-mix(in srgb, #fff 40%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
-    border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    border-color: color-mix(in oklab, var(--color-white) 40%, transparent);
   }
   --tw-gradient-position: to bottom right;
   @supports (background-image: linear-gradient(in lab, red, red)) {
@@ -428,6 +428,45 @@ h1 {
   @media (width >= 64rem) {
     width: 16%;
   }
+}
+.forecast-5days {
+  margin-inline: auto;
+  margin-block: calc(var(--spacing) * 10);
+  width: 90%;
+  max-width: var(--container-4xl);
+  overflow-x: auto;
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+  @media (width >= 48rem) {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+}
+.forecast-5days-container {
+  display: flex;
+  min-width: calc(var(--spacing) * 150);
+  justify-content: space-between;
+}
+.forecast-5days-labels {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 4);
+  text-align: center;
+}
+.forecast-5days-cards-container {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  padding: calc(var(--spacing) * 4);
+}
+.forecast-5days-card {
+  display: flex;
+  width: calc(var(--spacing) * 20);
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  text-align: center;
 }
 @property --tw-border-style {
   syntax: "*";
