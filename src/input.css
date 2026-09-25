@@ -209,30 +209,23 @@ h1 {
 .forecast-5days-container {
     @apply flex
     justify-between
-    min-w-150;
+    min-w-150
+    py-5;
 }
 
-.forecast-5days-labels {
-    @apply w-[20%]
-    flex
-    flex-col
-    gap-2
-    text-center
-    p-4;
+.forecast-5days-container table {
+    @apply w-[90%]
+    mx-auto
+    border-separate
+    border-spacing-x-4
+    border-spacing-y-4
 }
 
-.forecast-5days-cards-container {
-    @apply w-[80%] 
-    flex
-    justify-around
-    p-4;
+.forecast-5days-container table td {
+    @apply text-center;
 }
 
-.forecast-5days-card {
-    @apply w-20
-    flex
-    flex-col
-    gap-2
-    text-center;
-    /* border: 1px solid red; */
+#forecast5DaysTableBody .weather-icon {
+    @apply w-16
+    h-16
 }

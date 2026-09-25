@@ -50,6 +50,23 @@ const forecast3HourCards = document.querySelectorAll(".forecast-3hour-card");
 // average temperature
 const avgTemp = document.querySelector("#avgTemp");
 
+// 5 days forecast
+// days
+const forcastDayCells = document.querySelectorAll("#forecast5DaysTableBody .day");
+
+// weather icons
+const forecastWeatherIcons = document.querySelectorAll(
+    "#forecast5DaysTableBody .weather-icon"
+);
+
+// high temperature
+const forecastHighCells = document.querySelectorAll("#forecast5DaysTableBody .high");
+
+// low temperature
+const forecastLowCells = document.querySelectorAll("#forecast5DaysTableBody .low");
+
+// precipitation
+const forecastPrecipitationCells = document.querySelectorAll("#forecast5DaysTableBody .precipitation");
 
 // function - get current weather
 async function getWeather() {
@@ -125,14 +142,17 @@ async function getForecast() {
         }
         const data = await response.json();
         console.log(data);
-        console.log(data.list);
+        
+        const forecastList = data.list;
+        console.log(forecastList);
 
-        const forecast = data.list.slice(0,5);
-        console.log(forecast);
+        const forecast3Hour = forecastList.slice(0,5);
+        console.log(forecast3Hour);
 
         let totalTemperature = 0;
 
-        forecast.forEach((item, index) => {
+        // 3 hour forecast
+        forecast3Hour.forEach((item, index) => {
             const card = forecast3HourCards[index];
             const time = new Date(item.dt * 1000).toLocaleTimeString([], {
                 hour: "numeric"
@@ -143,16 +163,66 @@ async function getForecast() {
 
             totalTemperature += temperature;
 
-            avgTemp.textContent = `${totalTemperature / forecast.length}°C`;
+            avgTemp.textContent = `${totalTemperature / forecast3Hour.length}°C`;
         });
 
+        // daily forecast
+        const dailyForecast = {};
+
+        forecastList.forEach((item, index) => {
+            const date = new Date(item.dt * 1000).toLocaleDateString();
+            if (!dailyForecast[date]) {
+                dailyForecast[date] = [];
+            }
+            dailyForecast[date].push(item);
+        });
+        // console.log(dailyForecast);
+
+        const dates = Object.keys(dailyForecast);
+        console.log(dates);
         
+        dates.forEach((date) => {
+            const dayForecast = dailyForecast[date];
+
+            // day name
+            const dayName = new Date(date).toLocaleDateString([], {
+                weekday: "long"
+            });
+
+            // weather icon
+            const weatherIcon = `https://openweathermap.org/img/wn/${dayForecast[0].weather[0].icon}@2x.png`;
+
+            // temperature - high/low
+            const temperatures = dayForecast.map((item => {
+                return item.main.temp;
+            }));
+            const highTemp = Math.max(...temperatures);
+            const lowTemp = Math.min(...temperatures);
+
+            // precipitation 
+            const precipitation  = Math.max(...dayForecast.map((item) => {
+                return item.pop;
+            }));
+            const precipitationPercent = precipitation * 100;
+
+            const index = dates.indexOf(date);
+            
+            forcastDayCells[index].textContent = dayName;
+
+            forecastWeatherIcons[index].src = weatherIcon;
+            
+            forecastHighCells[index].textContent = `${Math.round(highTemp)}°C`;
+
+            forecastLowCells[index].textContent = `${Math.round(lowTemp)}°C`;
+
+            forecastPrecipitationCells[index].textContent = `${precipitationPercent}%`;
+        });
 
     } catch(error) {
         console.error(error);
     }
 }
-getForecast();
+
 
 // event listener - search button click
 searchBtn.addEventListener("click", () => {
@@ -162,6 +232,7 @@ searchBtn.addEventListener("click", () => {
         return;
     }
     getWeather();
+    getForecast();
     cityInput.value = "";
 });
 
@@ -173,3 +244,4 @@ cityInput.addEventListener("keydown", (event) => {
 });
 
 getWeather();
+getForecast();

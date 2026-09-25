@@ -451,27 +451,22 @@ h1 {
   display: flex;
   min-width: calc(var(--spacing) * 150);
   justify-content: space-between;
+  padding-block: calc(var(--spacing) * 5);
 }
-.forecast-5days-labels {
-  display: flex;
-  width: 20%;
-  flex-direction: column;
-  gap: calc(var(--spacing) * 2);
-  padding: calc(var(--spacing) * 4);
+.forecast-5days-container table {
+  margin-inline: auto;
+  width: 90%;
+  border-collapse: separate;
+  --tw-border-spacing-x: calc(var(--spacing) * 4);
+  --tw-border-spacing-y: calc(var(--spacing) * 4);
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+.forecast-5days-container table td {
   text-align: center;
 }
-.forecast-5days-cards-container {
-  display: flex;
-  width: 80%;
-  justify-content: space-around;
-  padding: calc(var(--spacing) * 4);
-}
-.forecast-5days-card {
-  display: flex;
-  width: calc(var(--spacing) * 20);
-  flex-direction: column;
-  gap: calc(var(--spacing) * 2);
-  text-align: center;
+#forecast5DaysTableBody .weather-icon {
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 16);
 }
 @property --tw-border-style {
   syntax: "*";
@@ -625,6 +620,16 @@ h1 {
   syntax: "*";
   inherits: false;
 }
+@property --tw-border-spacing-x {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-spacing-y {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -662,6 +667,8 @@ h1 {
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
       --tw-font-weight: initial;
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
     }
   }
 }
