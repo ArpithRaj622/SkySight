@@ -7,13 +7,40 @@
 body {
     @apply min-h-screen
     font-roboto
-    bg-[url('../assets/images/SkySightBGMobile.png')]
-    lg:bg-[url('../assets/images/SkySightBGdesktop.png')]
     bg-cover
     bg-center
     bg-no-repeat
     bg-fixed
     text-white;
+}
+
+/* themes */
+/* sunrise - clear */
+.theme-clear-sunrise {
+    @apply bg-[url('../assets/images/ClearSunriseMobileBg.png')]
+    lg:bg-[url('../assets/images/ClearSunriseDesktopBg.png')];
+}
+
+.theme-clear-morning {
+    @apply bg-[url('../assets/images/ClearMorningMobileBg.png')]
+    lg:bg-[url('../assets/images/ClearMorningDesktopBg.png')];
+}
+
+.theme-clear-afternoon {
+    @apply bg-[url('../assets/images/ClearAfternoonMobileBg.png')]
+    lg:bg-[url('../assets/images/ClearAfternoonDesktopBg.png')];
+}
+
+/* sunset - clear */
+.theme-clear-sunset {
+    @apply bg-[url('../assets/images/ClearSunsetMobileBg.png')]
+    lg:bg-[url('../assets/images/ClearSunsetDesktopBg.png')];
+}
+
+
+.theme-clear-night {
+    @apply bg-[url('../assets/images/ClearNightMobileBG.png')]
+    lg:bg-[url('../assets/images/ClearNightDesktopBg.png')];
 }
 
 header {
@@ -40,7 +67,7 @@ h1 {
 /* search section */
 .search-section {
     @apply w-[90%]
-    max-w-4xl
+    max-w-3xl
     mx-auto
     my-10
     flex
@@ -83,7 +110,7 @@ h1 {
 /* weather section */
 .weather-section {
     @apply w-[90%]
-    max-w-4xl
+    max-w-3xl
     mx-auto
     my-10
     text-white
@@ -136,7 +163,7 @@ h1 {
 /* weather details */
 .weather-details {
     @apply w-[90%]
-    max-w-4xl
+    max-w-xl
     mx-auto
     my-16
     grid
@@ -144,12 +171,12 @@ h1 {
     md:grid-cols-3
     lg:grid-cols-4
     gap-6
-    lg:gap-12;
+    lg:gap-8;
 }
 
 .card {
     @apply text-center
-    py-2;
+    py-1;
 }
 
 .card i {
@@ -161,7 +188,7 @@ h1 {
 /* 3 hour forecast */
 .forecast-3hour {
     @apply w-[90%]
-    max-w-4xl
+    max-w-xl
     mx-auto
     my-10
     flex
@@ -198,7 +225,7 @@ h1 {
 /* 5 days forecast */
 .forecast-5days {
     @apply w-[90%]
-    max-w-4xl
+    max-w-3xl
     mx-auto
     my-10
     text-xs
@@ -226,6 +253,9 @@ h1 {
 }
 
 #forecast5DaysTableBody .weather-icon {
-    @apply w-16
-    h-16
+    @apply w-10
+    h-10 
+    md:w-16
+    md:h-16
+    mx-auto
 }
