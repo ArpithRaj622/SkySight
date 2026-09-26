@@ -51,6 +51,42 @@ body {
     lg:bg-[url('../assets/images/ClearNightDesktopBg.png')];
 }
 
+/* sunrise - cloudy */
+.theme-cloudy-sunrise {
+    @apply bg-[url('../assets/images/CloudySunriseMobileBg.png')]
+    lg:bg-[url('../assets/images/CloudySunriseDesktopBg.png')];
+}
+
+/* morning - cloudy */
+.theme-cloudy-morning {
+    @apply bg-[url('../assets/images/CloudyMorningMobileBg.png')]
+    lg:bg-[url('../assets/images/CloudyMorningDesktopBg.png')];
+}
+
+/* afternoon - cloudy */
+.theme-cloudy-afternoon {
+    @apply bg-[url('../assets/images/CloudyAfternoonMobileBg.png')]
+    lg:bg-[url('../assets/images/CloudyAfternoonDesktopBg.png')];
+}
+
+/* evening - cloudy */
+.theme-cloudy-evening {
+    @apply bg-[url('../assets/images/CloudyEveningMobileBg.png')]
+    lg:bg-[url('../assets/images/CloudyEveningDesktopBg.png')];
+}
+
+/* sunset - cloudy */
+.theme-cloudy-sunset {
+    @apply bg-[url('../assets/images/CloudySunsetMobileBg.png')]
+    lg:bg-[url('../assets/images/CloudySunsetDesktopBg.png')];
+}
+
+/* night - cloudy */
+.theme-cloudy-night {
+    @apply bg-[url('../assets/images/CloudyNightMobileBg.png')]
+    lg:bg-[url('../assets/images/CloudyNightDesktopBg.png')];
+}
+
 header {
     @apply p-2
     bg-linear-to-br

@@ -260,6 +260,42 @@ body {
     background-image: url('../assets/images/ClearNightDesktopBg.png');
   }
 }
+.theme-cloudy-sunrise {
+  background-image: url('../assets/images/CloudySunriseMobileBg.png');
+  @media (width >= 64rem) {
+    background-image: url('../assets/images/CloudySunriseDesktopBg.png');
+  }
+}
+.theme-cloudy-morning {
+  background-image: url('../assets/images/CloudyMorningMobileBg.png');
+  @media (width >= 64rem) {
+    background-image: url('../assets/images/CloudyMorningDesktopBg.png');
+  }
+}
+.theme-cloudy-afternoon {
+  background-image: url('../assets/images/CloudyAfternoonMobileBg.png');
+  @media (width >= 64rem) {
+    background-image: url('../assets/images/CloudyAfternoonDesktopBg.png');
+  }
+}
+.theme-cloudy-evening {
+  background-image: url('../assets/images/CloudyEveningMobileBg.png');
+  @media (width >= 64rem) {
+    background-image: url('../assets/images/CloudyEveningDesktopBg.png');
+  }
+}
+.theme-cloudy-sunset {
+  background-image: url('../assets/images/CloudySunsetMobileBg.png');
+  @media (width >= 64rem) {
+    background-image: url('../assets/images/CloudySunsetDesktopBg.png');
+  }
+}
+.theme-cloudy-night {
+  background-image: url('../assets/images/CloudyNightMobileBg.png');
+  @media (width >= 64rem) {
+    background-image: url('../assets/images/CloudyNightDesktopBg.png');
+  }
+}
 header {
   position: sticky;
   top: 0px;
