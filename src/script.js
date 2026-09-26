@@ -215,7 +215,7 @@ async function getForecast() {
 
             forecastLowCells[index].textContent = `${Math.round(lowTemp)}°C`;
 
-            forecastPrecipitationCells[index].textContent = `${precipitationPercent}%`;
+            forecastPrecipitationCells[index].textContent = `${Math.round(precipitationPercent)}%`;
         });
 
     } catch(error) {
