@@ -226,74 +226,158 @@ body {
 }
 .theme-clear-sunrise {
   background-image: url('../assets/images/ClearSunriseMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/ClearSunriseDesktopBg.png');
   }
 }
 .theme-clear-morning {
   background-image: url('../assets/images/ClearMorningMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/ClearMorningDesktopBg.png');
   }
 }
 .theme-clear-afternoon {
   background-image: url('../assets/images/ClearAfternoonMobileBg.png');
-  @media (width >= 64rem) {
-    background-image: url('../assets/images/ClearAfternoonDesktopBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/ClearAfternoonDesktopBg2.png');
   }
 }
 .theme-clear-evening {
   background-image: url('../assets/images/ClearEveningMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/ClearEveningDesktopBg.png');
   }
 }
 .theme-clear-sunset {
   background-image: url('../assets/images/ClearSunsetMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/ClearSunsetDesktopBg.png');
   }
 }
 .theme-clear-night {
   background-image: url('../assets/images/ClearNightMobileBG.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/ClearNightDesktopBg.png');
   }
 }
 .theme-cloudy-sunrise {
   background-image: url('../assets/images/CloudySunriseMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/CloudySunriseDesktopBg.png');
   }
 }
 .theme-cloudy-morning {
   background-image: url('../assets/images/CloudyMorningMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/CloudyMorningDesktopBg.png');
   }
 }
 .theme-cloudy-afternoon {
   background-image: url('../assets/images/CloudyAfternoonMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/CloudyAfternoonDesktopBg.png');
   }
 }
 .theme-cloudy-evening {
   background-image: url('../assets/images/CloudyEveningMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/CloudyEveningDesktopBg.png');
   }
 }
 .theme-cloudy-sunset {
   background-image: url('../assets/images/CloudySunsetMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/CloudySunsetDesktopBg.png');
   }
 }
 .theme-cloudy-night {
   background-image: url('../assets/images/CloudyNightMobileBg.png');
-  @media (width >= 64rem) {
+  @media (width >= 80rem) {
     background-image: url('../assets/images/CloudyNightDesktopBg.png');
+  }
+}
+.theme-rainy-sunrise {
+  background-image: url('../assets/images/RainySunriseMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/RainySunriseDesktopBg.png');
+  }
+}
+.theme-rainy-morning {
+  background-image: url('../assets/images/RainyMorningMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/RainyMorningDesktopBg.png');
+  }
+}
+.theme-rainy-afternoon {
+  background-image: url('../assets/images/RainyAfternoonMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/RainyAfternoonDesktopBg.png');
+  }
+}
+.theme-rainy-evening {
+  background-image: url('../assets/images/RainyEveningMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/RainyEveningDesktopBg.png');
+  }
+}
+.theme-rainy-sunset {
+  background-image: url('../assets/images/RainySunsetMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/RainySunsetDesktopBg.png');
+  }
+}
+.theme-rainy-night {
+  background-image: url('../assets/images/RainyNightMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/RainyNightDesktopBg.png');
+  }
+}
+.theme-thunderstorm-sunrise {
+  background-image: url('../assets/images/ThunderstormSunriseMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/ThunderstormSunriseDesktopBg.png');
+  }
+}
+.theme-thunderstorm-morning {
+  background-image: url('../assets/images/ThunderstormMorningMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/ThunderstormMorningDesktopBg.png');
+  }
+}
+.theme-thunderstorm-afternoon {
+  background-image: url('../assets/images/ThunderstormAfternoonMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/ThunderstormAfternoonDesktopBg.png');
+  }
+}
+.theme-thunderstorm-evening {
+  background-image: url('../assets/images/ThunderstormEveningMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/ThunderstormEveningDesktopBg.png');
+  }
+}
+.theme-thunderstorm-sunset {
+  background-image: url('../assets/images/ThunderstormSunsetMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/ThunderstormSunsetDesktopBg.png');
+  }
+}
+.theme-thunderstorm-night {
+  background-image: url('../assets/images/ThunderstormNightMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/ThunderstormNightDesktopBg.png');
+  }
+}
+.theme-mist-sunrise {
+  background-image: url('../assets/images/MistSunriseMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/MistSunriseDesktopBg.png');
+  }
+}
+.theme-mist-morning {
+  background-image: url('../assets/images/MistMorningMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/MistMorningDesktopBg.png');
   }
 }
 header {

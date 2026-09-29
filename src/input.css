@@ -18,75 +18,168 @@ body {
 /* sunrise - clear */
 .theme-clear-sunrise {
     @apply bg-[url('../assets/images/ClearSunriseMobileBg.png')]
-    lg:bg-[url('../assets/images/ClearSunriseDesktopBg.png')];
+    xl:bg-[url('../assets/images/ClearSunriseDesktopBg.png')];
 }
 
 /* morning - clear */
 .theme-clear-morning {
     @apply bg-[url('../assets/images/ClearMorningMobileBg.png')]
-    lg:bg-[url('../assets/images/ClearMorningDesktopBg.png')];
+    xl:bg-[url('../assets/images/ClearMorningDesktopBg.png')];
 }
 
 /* afternoon - clear */
 .theme-clear-afternoon {
     @apply bg-[url('../assets/images/ClearAfternoonMobileBg.png')]
-    lg:bg-[url('../assets/images/ClearAfternoonDesktopBg.png')];
+    xl:bg-[url('../assets/images/ClearAfternoonDesktopBg2.png')];
 }
 
 /* evening - clear */
 .theme-clear-evening {
     @apply bg-[url('../assets/images/ClearEveningMobileBg.png')]
-    lg:bg-[url('../assets/images/ClearEveningDesktopBg.png')];
+    xl:bg-[url('../assets/images/ClearEveningDesktopBg.png')];
 }
 
 /* sunset - clear */
 .theme-clear-sunset {
     @apply bg-[url('../assets/images/ClearSunsetMobileBg.png')]
-    lg:bg-[url('../assets/images/ClearSunsetDesktopBg.png')];
+    xl:bg-[url('../assets/images/ClearSunsetDesktopBg.png')];
 }
 
 /* night - clear */
 .theme-clear-night {
     @apply bg-[url('../assets/images/ClearNightMobileBG.png')]
-    lg:bg-[url('../assets/images/ClearNightDesktopBg.png')];
+    xl:bg-[url('../assets/images/ClearNightDesktopBg.png')];
 }
+
+
 
 /* sunrise - cloudy */
 .theme-cloudy-sunrise {
     @apply bg-[url('../assets/images/CloudySunriseMobileBg.png')]
-    lg:bg-[url('../assets/images/CloudySunriseDesktopBg.png')];
+    xl:bg-[url('../assets/images/CloudySunriseDesktopBg.png')];
 }
 
 /* morning - cloudy */
 .theme-cloudy-morning {
     @apply bg-[url('../assets/images/CloudyMorningMobileBg.png')]
-    lg:bg-[url('../assets/images/CloudyMorningDesktopBg.png')];
+    xl:bg-[url('../assets/images/CloudyMorningDesktopBg.png')];
 }
 
 /* afternoon - cloudy */
 .theme-cloudy-afternoon {
     @apply bg-[url('../assets/images/CloudyAfternoonMobileBg.png')]
-    lg:bg-[url('../assets/images/CloudyAfternoonDesktopBg.png')];
+    xl:bg-[url('../assets/images/CloudyAfternoonDesktopBg.png')];
 }
 
 /* evening - cloudy */
 .theme-cloudy-evening {
     @apply bg-[url('../assets/images/CloudyEveningMobileBg.png')]
-    lg:bg-[url('../assets/images/CloudyEveningDesktopBg.png')];
+    xl:bg-[url('../assets/images/CloudyEveningDesktopBg.png')];
 }
 
 /* sunset - cloudy */
 .theme-cloudy-sunset {
     @apply bg-[url('../assets/images/CloudySunsetMobileBg.png')]
-    lg:bg-[url('../assets/images/CloudySunsetDesktopBg.png')];
+    xl:bg-[url('../assets/images/CloudySunsetDesktopBg.png')];
 }
 
 /* night - cloudy */
 .theme-cloudy-night {
     @apply bg-[url('../assets/images/CloudyNightMobileBg.png')]
-    lg:bg-[url('../assets/images/CloudyNightDesktopBg.png')];
+    xl:bg-[url('../assets/images/CloudyNightDesktopBg.png')];
 }
 
+
+
+/* sunrise - rainy */
+.theme-rainy-sunrise {
+    @apply bg-[url('../assets/images/RainySunriseMobileBg.png')]
+    xl:bg-[url('../assets/images/RainySunriseDesktopBg.png')];
+}
+
+/* morning - rainy */
+.theme-rainy-morning {
+    @apply bg-[url('../assets/images/RainyMorningMobileBg.png')]
+    xl:bg-[url('../assets/images/RainyMorningDesktopBg.png')];
+}
+
+/* afternoon - rainy */
+.theme-rainy-afternoon {
+    @apply bg-[url('../assets/images/RainyAfternoonMobileBg.png')]
+    xl:bg-[url('../assets/images/RainyAfternoonDesktopBg.png')];
+}
+
+/* evening - rainy */
+.theme-rainy-evening {
+    @apply bg-[url('../assets/images/RainyEveningMobileBg.png')]
+    xl:bg-[url('../assets/images/RainyEveningDesktopBg.png')];
+}
+
+/* sunset - rainy */
+.theme-rainy-sunset {
+    @apply bg-[url('../assets/images/RainySunsetMobileBg.png')]
+    xl:bg-[url('../assets/images/RainySunsetDesktopBg.png')];
+}
+
+/* night - rainy */
+.theme-rainy-night {
+    @apply bg-[url('../assets/images/RainyNightMobileBg.png')]
+    xl:bg-[url('../assets/images/RainyNightDesktopBg.png')];
+}
+
+
+
+/* thunderstorm - sunrise */
+.theme-thunderstorm-sunrise {
+    @apply bg-[url('../assets/images/ThunderstormSunriseMobileBg.png')]
+    xl:bg-[url('../assets/images/ThunderstormSunriseDesktopBg.png')];
+}
+
+/* thunderstorm - morning */
+.theme-thunderstorm-morning {
+    @apply bg-[url('../assets/images/ThunderstormMorningMobileBg.png')]
+    xl:bg-[url('../assets/images/ThunderstormMorningDesktopBg.png')];
+}
+
+/* thunderstorm - afternoon */
+.theme-thunderstorm-afternoon {
+    @apply bg-[url('../assets/images/ThunderstormAfternoonMobileBg.png')]
+    xl:bg-[url('../assets/images/ThunderstormAfternoonDesktopBg.png')];
+}
+
+/* thunderstorm - evening */
+.theme-thunderstorm-evening {
+    @apply bg-[url('../assets/images/ThunderstormEveningMobileBg.png')]
+    xl:bg-[url('../assets/images/ThunderstormEveningDesktopBg.png')];
+}
+
+/* thunderstorm - sunset */
+.theme-thunderstorm-sunset {
+    @apply bg-[url('../assets/images/ThunderstormSunsetMobileBg.png')]
+    xl:bg-[url('../assets/images/ThunderstormSunsetDesktopBg.png')];
+}
+
+/* thunderstorm - night */
+.theme-thunderstorm-night {
+    @apply bg-[url('../assets/images/ThunderstormNightMobileBg.png')]
+    xl:bg-[url('../assets/images/ThunderstormNightDesktopBg.png')];
+}
+
+
+
+/* mist - sunrise */
+.theme-mist-sunrise {
+    @apply bg-[url('../assets/images/MistSunriseMobileBg.png')]
+    xl:bg-[url('../assets/images/MistSunriseDesktopBg.png')];
+}
+
+/* mist - morning */
+.theme-mist-morning {
+    @apply bg-[url('../assets/images/MistMorningMobileBg.png')]
+    xl:bg-[url('../assets/images/MistMorningDesktopBg.png')];
+}
+
+/* header */
 header {
     @apply p-2
     bg-linear-to-br
