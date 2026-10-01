@@ -179,6 +179,36 @@ body {
     xl:bg-[url('../assets/images/MistMorningDesktopBg.png')];
 }
 
+/* mist - afternoon */
+.theme-mist-afternoon {
+    @apply bg-[url('../assets/images/MistAfternoonMobileBg.png')]
+    xl:bg-[url('../assets/images/MistAfternoonDesktopBg.png')];
+}
+
+/* mist - evening */
+.theme-mist-evening {
+    @apply bg-[url('../assets/images/MistEveningMobileBg.png')]
+    xl:bg-[url('../assets/images/MistEveningDesktopBg.png')];
+}
+
+/* mist - sunset */
+.theme-mist-sunset {
+    @apply bg-[url('../assets/images/MistSunsetMobileBg.png')]
+    xl:bg-[url('../assets/images/MistSunsetDesktopBg.png')];
+}
+
+/* mist - sunset */
+.theme-mist-sunset {
+    @apply bg-[url('../assets/images/MistSunsetMobileBg.png')]
+    xl:bg-[url('../assets/images/MistSunsetDesktopBg.png')];
+}
+
+/* mist - night */
+.theme-mist-night {
+    @apply bg-[url('../assets/images/MistNightMobileBg.png')]
+    xl:bg-[url('../assets/images/MistNightDesktopBg.png')];
+}
+
 /* header */
 header {
     @apply p-2

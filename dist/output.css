@@ -380,6 +380,33 @@ body {
     background-image: url('../assets/images/MistMorningDesktopBg.png');
   }
 }
+.theme-mist-afternoon {
+  background-image: url('../assets/images/MistAfternoonMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/MistAfternoonDesktopBg.png');
+  }
+}
+.theme-mist-evening {
+  background-image: url('../assets/images/MistEveningMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/MistEveningDesktopBg.png');
+  }
+}
+.theme-mist-sunset {
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/MistSunsetDesktopBg.png');
+  }
+  background-image: url('../assets/images/MistSunsetMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/MistSunsetDesktopBg.png');
+  }
+}
+.theme-mist-night {
+  background-image: url('../assets/images/MistNightMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/MistNightDesktopBg.png');
+  }
+}
 header {
   position: sticky;
   top: 0px;
