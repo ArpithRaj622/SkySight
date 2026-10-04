@@ -197,12 +197,6 @@ body {
     xl:bg-[url('../assets/images/MistSunsetDesktopBg.png')];
 }
 
-/* mist - sunset */
-.theme-mist-sunset {
-    @apply bg-[url('../assets/images/MistSunsetMobileBg.png')]
-    xl:bg-[url('../assets/images/MistSunsetDesktopBg.png')];
-}
-
 /* mist - night */
 .theme-mist-night {
     @apply bg-[url('../assets/images/MistNightMobileBg.png')]

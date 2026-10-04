@@ -78,6 +78,7 @@ async function getWeather() {
             throw new Error("Failed to fetch weather data");
         }
         const data = await response.json();
+
         localStorage.setItem("city", city);
         // console.log(data);
         // console.log(data.weather[0].icon);
@@ -169,7 +170,7 @@ async function getForecast() {
         // daily forecast
         const dailyForecast = {};
 
-        forecastList.forEach((item, index) => {
+        forecastList.forEach((item) => {
             const date = new Date(item.dt * 1000).toLocaleDateString();
             if (!dailyForecast[date]) {
                 dailyForecast[date] = [];
@@ -184,13 +185,22 @@ async function getForecast() {
         dates.forEach((date) => {
             const dayForecast = dailyForecast[date];
 
+            const noonForecast = dayForecast.reduce((closest, item) => {
+                const itemHour = new Date(item.dt * 1000).getHours();
+                const closestHour = new Date(closest.dt * 1000).getHours();
+
+                return Math.abs(itemHour - 12) < Math.abs(closestHour - 12)
+                    ? item
+                    : closest;
+            });
+
             // day name
             const dayName = new Date(date).toLocaleDateString([], {
                 weekday: "long"
             });
 
             // weather icon
-            const weatherIcon = `https://openweathermap.org/img/wn/${dayForecast[0].weather[0].icon}@2x.png`;
+            const weatherIcon = `https://openweathermap.org/img/wn/${noonForecast.weather[0].icon}@2x.png`;
 
             // temperature - high/low
             const temperatures = dayForecast.map((item => {

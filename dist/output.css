@@ -393,9 +393,6 @@ body {
   }
 }
 .theme-mist-sunset {
-  @media (width >= 80rem) {
-    background-image: url('../assets/images/MistSunsetDesktopBg.png');
-  }
   background-image: url('../assets/images/MistSunsetMobileBg.png');
   @media (width >= 80rem) {
     background-image: url('../assets/images/MistSunsetDesktopBg.png');
