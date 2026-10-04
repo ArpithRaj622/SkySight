@@ -11,7 +11,9 @@ body {
     bg-center
     bg-no-repeat
     bg-fixed
-    text-white;
+    text-white
+    bg-[url('../assets/images/MistNightMobileBg.png')]
+    xl:bg-[url('../assets/images/MistNightDesktopBg.png')];
 }
 
 /* themes */
@@ -30,7 +32,7 @@ body {
 /* afternoon - clear */
 .theme-clear-afternoon {
     @apply bg-[url('../assets/images/ClearAfternoonMobileBg.png')]
-    xl:bg-[url('../assets/images/ClearAfternoonDesktopBg2.png')];
+    xl:bg-[url('../assets/images/ClearAfternoonDesktopBg.png')];
 }
 
 /* evening - clear */

@@ -68,6 +68,70 @@ const forecastLowCells = document.querySelectorAll("#forecast5DaysTableBody .low
 // precipitation
 const forecastPrecipitationCells = document.querySelectorAll("#forecast5DaysTableBody .precipitation");
 
+// current theme
+let currentTheme = "";
+
+
+
+// function - get weather category
+function getWeatherCategory(weatherId) {
+    if (weatherId === 800) {
+        return "clear";
+    }
+
+    if (weatherId >= 801 && weatherId <= 804) {
+        return "cloudy";
+    }
+
+    if (weatherId >= 500 && weatherId <= 531) {
+        return "rainy";
+    }
+
+    if (weatherId >= 200 && weatherId <= 231) {
+        return "thunderstorm";
+    }
+
+    if (weatherId >= 701 && weatherId <= 781) {
+        return "mist";
+    }
+
+    return "night";
+}
+
+// function - get Time Category
+function getTimeCategory(sunrise, sunset) {
+    const currentTime = Date.now();
+
+    const sunriseTime = sunrise * 1000;
+    const sunsetTime = sunset * 1000;
+
+    if (currentTime < sunriseTime - 1 * 60 * 60 * 1000) {
+        return "night";
+    }
+
+    if (currentTime >= sunriseTime - 1 * 60 * 60 * 1000 && currentTime <= sunriseTime + 1 * 60 * 60 * 1000) {
+        return "sunrise";
+    }
+    if (currentTime > sunriseTime + 1 * 60 * 60 * 1000 && currentTime <= sunriseTime + 6 * 60 * 60 * 1000) {
+        return "morning";
+    }
+    if (currentTime > sunriseTime + 6 * 60 * 60 * 1000 && currentTime <= sunsetTime - 2 * 60 * 60 * 1000) {
+        return "afternoon";
+    } 
+    if (currentTime > sunsetTime - 2 * 60 * 60 * 1000 && currentTime < sunsetTime) {
+        return "evening";
+    }
+
+
+    if (currentTime >= sunsetTime && currentTime <= sunsetTime + 1 * 60 * 60 * 1000) {
+        return "sunset";
+    }
+
+    if (currentTime > sunsetTime + 1 * 60 * 60 * 1000) {
+        return "night";
+    }
+}
+
 // function - get current weather
 async function getWeather() {
     // url
@@ -78,6 +142,23 @@ async function getWeather() {
             throw new Error("Failed to fetch weather data");
         }
         const data = await response.json();
+
+        const weatherId = data.weather[0].id;
+
+        const weatherCategory = getWeatherCategory(weatherId);
+        console.log(weatherCategory);
+
+        const timeCategory = getTimeCategory(data.sys.sunrise, data.sys.sunset);
+        console.log(timeCategory);
+
+        const theme = `theme-${weatherCategory}-${timeCategory}`;
+
+        if (currentTheme) {
+            document.body.classList.remove(currentTheme);
+        }
+        document.body.classList.add(theme);
+
+        currentTheme = theme;
 
         localStorage.setItem("city", city);
         // console.log(data);
