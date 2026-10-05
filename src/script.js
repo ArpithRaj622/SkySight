@@ -7,7 +7,7 @@ const cityInput = document.querySelector("#cityInput");
 const searchBtn = document.querySelector("#searchBtn");
 
 // city
-let city = localStorage.getItem("city") || "Raichur";
+let city = localStorage.getItem("city") || "Bengaluru";
 
 // city name
 const cityName = document.querySelector("#cityName");
@@ -71,8 +71,12 @@ const forecastPrecipitationCells = document.querySelectorAll("#forecast5DaysTabl
 // current theme
 let currentTheme = "";
 
+// // // // // // //
 
 
+
+
+// // // // // // //
 // function - get weather category
 function getWeatherCategory(weatherId) {
     if (weatherId === 800) {

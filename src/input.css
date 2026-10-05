@@ -11,9 +11,7 @@ body {
     bg-center
     bg-no-repeat
     bg-fixed
-    text-white
-    bg-[url('../assets/images/MistNightMobileBg.png')]
-    xl:bg-[url('../assets/images/MistNightDesktopBg.png')];
+    text-white;
 }
 
 /* themes */

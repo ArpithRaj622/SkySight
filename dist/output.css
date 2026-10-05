@@ -217,16 +217,12 @@
 }
 body {
   min-height: 100vh;
-  background-image: url('../assets/images/MistNightMobileBg.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   font-family: var(--font-roboto);
   color: var(--color-white);
-  @media (width >= 80rem) {
-    background-image: url('../assets/images/MistNightDesktopBg.png');
-  }
 }
 .theme-clear-sunrise {
   background-image: url('../assets/images/ClearSunriseMobileBg.png');
