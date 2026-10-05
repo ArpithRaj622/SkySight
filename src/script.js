@@ -70,6 +70,12 @@ const forecastPrecipitationCells = document.querySelectorAll("#forecast5DaysTabl
 
 // current theme
 let currentTheme = "";
+let themeInterval;
+
+let weatherCategory = "";
+
+let sunriseTimestamp;
+let sunsetTimestamp;
 
 // // // // // // //
 
@@ -136,6 +142,22 @@ function getTimeCategory(sunrise, sunset) {
     }
 }
 
+function updateTheme() {
+    const timeCategory = getTimeCategory(sunriseTimestamp, sunsetTimestamp);
+
+
+    const theme = `theme-${weatherCategory}-${timeCategory}`;
+    
+    if (theme === currentTheme) {
+        return;
+    }
+
+    document.body.classList.remove(currentTheme);
+    document.body.classList.add(theme);
+
+    currentTheme = theme;
+}
+
 // function - get current weather
 async function getWeather() {
     // url
@@ -147,9 +169,12 @@ async function getWeather() {
         }
         const data = await response.json();
 
+        sunriseTimestamp = data.sys.sunrise;
+        sunsetTimestamp = data.sys.sunset;
+
         const weatherId = data.weather[0].id;
 
-        const weatherCategory = getWeatherCategory(weatherId);
+        weatherCategory = getWeatherCategory(weatherId);
         console.log(weatherCategory);
 
         const timeCategory = getTimeCategory(data.sys.sunrise, data.sys.sunset);
@@ -212,6 +237,14 @@ async function getWeather() {
             hour: "2-digit",
             minute: "2-digit"
         });
+
+        // automatic theme checking
+        if (themeInterval) {
+            clearInterval(themeInterval);
+        }
+
+        themeInterval = setInterval(updateTheme, 60 * 1000);
+        
     } catch (error) {
         console.error(error);
     }
