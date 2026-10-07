@@ -12,14 +12,9 @@
 
     <title>SkySight</title>
     <link rel="stylesheet" href="./dist/output.css">
-    <style>
-        *{
-            /* border: 1px solid red;  */
-        }
-    </style>
 </head>
 
-<body>
+<body class="theme-default">
     <header>
         <div>
             <h1>SkySight</h1>
@@ -29,7 +24,6 @@
     <main>
         <!-- search section -->
         <section class="search-section glass">
-            <!-- search section -->
             <input type="text" placeholder="Search city" id="cityInput">
             <button id="searchBtn">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -64,6 +58,14 @@
 
         <!-- weather details -->
         <section class="weather-details">
+            
+            <!-- sunrise -->
+            <div class="card glass">
+                <i class="fa-solid fa-sun text-yellow-400"></i>
+                <p>Sunrise</p>
+                <p id="sunrise">--:--</p>
+            </div>
+
             <!-- feels like -->
             <div class="card glass">
                 <i class="fa-solid fa-temperature-half text-orange-500"></i>
@@ -106,13 +108,6 @@
                 <p id="cloudiness">40%</p>
             </div>
 
-            <!-- sunrise -->
-            <div class="card glass">
-                <i class="fa-solid fa-sun text-yellow-400"></i>
-                <p>Sunrise</p>
-                <p id="sunrise">--:--</p>
-            </div>
-
             <!-- sunset -->
             <div class="card glass">
                 <i class="fa-solid fa-cloud-sun text-yellow-400"></i>
@@ -126,27 +121,27 @@
             <div class="forecast-3hour-container glass">
                 <!-- 1 -->
                 <div class="forecast-3hour-card">
-                    <p class="time">12 PM</p>
-                    <p class="temp">28°C</p>
+                    <p class="time"></p>
+                    <p class="temp"></p>
                 </div>
                 <!-- 2 -->
                 <div class="forecast-3hour-card">
-                    <p class="time">12 PM</p>
+                    <p class="time"></p>
                     <p class="temp"></p>
                 </div>
                 <!-- 3 -->
                 <div class="forecast-3hour-card">
-                    <p class="time">12 PM</p>
+                    <p class="time"></p>
                     <p class="temp"></p>
                 </div>
                 <!-- 4 -->
                 <div class="forecast-3hour-card">
-                    <p class="time">12 PM</p>
+                    <p class="time"></p>
                     <p class="temp"></p>
                 </div>
                 <!-- 5 -->
                 <div class="forecast-3hour-card">
-                    <p class="time">12 PM</p>
+                    <p class="time"></p>
                     <p class="temp"></p>
                 </div>
             </div>

@@ -52,7 +52,7 @@ const avgTemp = document.querySelector("#avgTemp");
 
 // 5 days forecast
 // days
-const forcastDayCells = document.querySelectorAll("#forecast5DaysTableBody .day");
+const forecastDayCells = document.querySelectorAll("#forecast5DaysTableBody .day");
 
 // weather icons
 const forecastWeatherIcons = document.querySelectorAll(
@@ -165,7 +165,7 @@ async function getWeather() {
     try {
         const response = await fetch(url);
         if (response.ok === false) {
-            throw new Error("Failed to fetch weather data");
+            throw new Error("City not found");
         }
         const data = await response.json();
 
@@ -175,10 +175,8 @@ async function getWeather() {
         const weatherId = data.weather[0].id;
 
         weatherCategory = getWeatherCategory(weatherId);
-        console.log(weatherCategory);
 
         const timeCategory = getTimeCategory(data.sys.sunrise, data.sys.sunset);
-        console.log(timeCategory);
 
         const theme = `theme-${weatherCategory}-${timeCategory}`;
 
@@ -190,8 +188,6 @@ async function getWeather() {
         currentTheme = theme;
 
         localStorage.setItem("city", city);
-        // console.log(data);
-        // console.log(data.weather[0].icon);
 
         // display city
         cityName.textContent = city;
@@ -247,6 +243,7 @@ async function getWeather() {
         
     } catch (error) {
         console.error(error);
+        alert(error.message);
     }
 }
 
@@ -260,13 +257,10 @@ async function getForecast() {
             throw new Error("Failed to fetch forecast data");
         }
         const data = await response.json();
-        console.log(data);
         
         const forecastList = data.list;
-        console.log(forecastList);
 
         const forecast3Hour = forecastList.slice(0,5);
-        console.log(forecast3Hour);
 
         let totalTemperature = 0;
 
@@ -295,10 +289,8 @@ async function getForecast() {
             }
             dailyForecast[date].push(item);
         });
-        // console.log(dailyForecast);
 
         const dates = Object.keys(dailyForecast);
-        console.log(dates);
         
         dates.forEach((date) => {
             const dayForecast = dailyForecast[date];
@@ -335,7 +327,7 @@ async function getForecast() {
 
             const index = dates.indexOf(date);
             
-            forcastDayCells[index].textContent = dayName;
+            forecastDayCells[index].textContent = dayName;
 
             forecastWeatherIcons[index].src = weatherIcon;
             
@@ -353,14 +345,22 @@ async function getForecast() {
 
 
 // event listener - search button click
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", async () => {
     city = cityInput.value.trim().toLowerCase();
     city = city.charAt(0).toUpperCase() + city.slice(1);
     if (city === "") {
         return;
     }
-    getWeather();
-    getForecast();
+    searchBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+    searchBtn.disabled = true;
+
+    try {
+        await Promise.all([getWeather(), getForecast()]);
+    } finally {
+        searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+        searchBtn.disabled = false;
+    }
+
     cityInput.value = "";
 });
 

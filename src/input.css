@@ -15,6 +15,13 @@ body {
 }
 
 /* themes */
+
+/* default theme */
+.theme-default {
+    @apply bg-[url('../assets/images/DefaultMobileBg.png')]
+    xl:bg-[url('../assets/images/DefaultDesktopBg.png')];
+}
+
 /* sunrise - clear */
 .theme-clear-sunrise {
     @apply bg-[url('../assets/images/ClearSunriseMobileBg.png')]
@@ -372,7 +379,7 @@ h1 {
 }
 
 .forecast-3hour-card .time {
-    @apply text-sm
+    @apply text-sm;
 }
 
 .day-avg-card {

@@ -189,10 +189,6 @@
   }
 }
 @layer utilities {
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .text-blue-400 {
     color: var(--color-blue-400);
   }
@@ -223,6 +219,12 @@ body {
   background-repeat: no-repeat;
   font-family: var(--font-roboto);
   color: var(--color-white);
+}
+.theme-default {
+  background-image: url('../assets/images/DefaultMobileBg.png');
+  @media (width >= 80rem) {
+    background-image: url('../assets/images/DefaultDesktopBg.png');
+  }
 }
 .theme-clear-sunrise {
   background-image: url('../assets/images/ClearSunriseMobileBg.png');
@@ -653,11 +655,6 @@ h1 {
     width: calc(var(--spacing) * 16);
   }
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-gradient-position {
   syntax: "*";
   inherits: false;
@@ -805,6 +802,11 @@ h1 {
   syntax: "*";
   inherits: false;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-border-spacing-x {
   syntax: "<length>";
   inherits: false;
@@ -818,7 +820,6 @@ h1 {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -852,6 +853,7 @@ h1 {
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
       --tw-font-weight: initial;
+      --tw-border-style: solid;
       --tw-border-spacing-x: 0;
       --tw-border-spacing-y: 0;
     }
