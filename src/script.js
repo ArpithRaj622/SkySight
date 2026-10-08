@@ -283,7 +283,7 @@ async function getForecast() {
         const dailyForecast = {};
 
         forecastList.forEach((item) => {
-            const date = new Date(item.dt * 1000).toLocaleDateString();
+            const date = new Date(item.dt * 1000).toISOString().split("T")[0];
             if (!dailyForecast[date]) {
                 dailyForecast[date] = [];
             }
@@ -305,7 +305,7 @@ async function getForecast() {
             });
 
             // day name
-            const dayName = new Date(date).toLocaleDateString([], {
+            const dayName = new Date(`${date}T00:00:00`).toLocaleDateString([], {
                 weekday: "long"
             });
 
