@@ -54,7 +54,7 @@ body {
 
 /* night - clear */
 .theme-clear-night {
-    @apply bg-[url('../assets/images/ClearNightMobileBG.png')]
+    @apply bg-[url('../assets/images/ClearNightMobileBg.png')]
     xl:bg-[url('../assets/images/ClearNightDesktopBg.png')];
 }
 
