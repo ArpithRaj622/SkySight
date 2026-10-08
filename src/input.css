@@ -213,16 +213,9 @@ body {
 /* header */
 header {
     @apply p-2
-    
     sticky
     top-0
     z-50
-}
-
-h1 {
-    @apply text-white
-    font-bold
-    text-2xl;
 }
 
 header img {

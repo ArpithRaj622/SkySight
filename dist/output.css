@@ -411,13 +411,6 @@ header {
   z-index: 50;
   padding: calc(var(--spacing) * 2);
 }
-h1 {
-  font-size: var(--text-2xl);
-  line-height: var(--tw-leading, var(--text-2xl--line-height));
-  --tw-font-weight: var(--font-weight-bold);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
-}
 header img {
   height: auto;
   width: calc(var(--spacing) * 40);

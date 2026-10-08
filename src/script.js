@@ -115,14 +115,14 @@ function getTimeCategory(sunrise, sunset) {
     const sunriseTime = sunrise * 1000;
     const sunsetTime = sunset * 1000;
 
-    if (currentTime < sunriseTime - 1 * 60 * 60 * 1000) {
+    if (currentTime < sunriseTime - 30 * 60 * 1000) {
         return "night";
     }
 
-    if (currentTime >= sunriseTime - 1 * 60 * 60 * 1000 && currentTime <= sunriseTime + 1 * 60 * 60 * 1000) {
+    if (currentTime >= sunriseTime - 30 * 60 * 1000 && currentTime <= sunriseTime + 30 * 60 * 1000) {
         return "sunrise";
     }
-    if (currentTime > sunriseTime + 1 * 60 * 60 * 1000 && currentTime <= sunriseTime + 6 * 60 * 60 * 1000) {
+    if (currentTime > sunriseTime + 30 * 60 * 1000 && currentTime <= sunriseTime + 6 * 60 * 60 * 1000) {
         return "morning";
     }
     if (currentTime > sunriseTime + 6 * 60 * 60 * 1000 && currentTime <= sunsetTime - 2 * 60 * 60 * 1000) {
@@ -133,11 +133,11 @@ function getTimeCategory(sunrise, sunset) {
     }
 
 
-    if (currentTime >= sunsetTime && currentTime <= sunsetTime + 1 * 60 * 60 * 1000) {
+    if (currentTime >= sunsetTime && currentTime <= sunsetTime + 30 * 60 * 1000) {
         return "sunset";
     }
 
-    if (currentTime > sunsetTime + 1 * 60 * 60 * 1000) {
+    if (currentTime > sunsetTime + 30 * 60 * 1000) {
         return "night";
     }
 }
