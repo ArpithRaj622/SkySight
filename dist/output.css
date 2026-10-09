@@ -233,9 +233,6 @@ body {
 }
 .theme-clear-morning {
   background-image: url('../assets/images/ClearMorningMobileBg.png');
-  @media (width >= 80rem) {
-    background-image: url('../assets/images/ClearMorningDesktopBg.png');
-  }
 }
 .theme-clear-afternoon {
   background-image: url('../assets/images/ClearAfternoonMobileBg.png');
