@@ -31,7 +31,7 @@ body {
 /* morning - clear */
 .theme-clear-morning {
     @apply bg-[url('../assets/images/ClearMorningMobileBg.png')]
-    /* xl:bg-[url('../assets/images/ClearMorningDesktopBg.png')]; */
+    xl:bg-[url('../assets/images/ClearMorningDesktopBg.png')];
 }
 
 /* afternoon - clear */
